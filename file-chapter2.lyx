@@ -1,0 +1,354 @@
+#LyX 1.5.5 created this file. For more info see http://www.lyx.org/
+\lyxformat 276
+\begin_document
+\begin_header
+\textclass article
+\language english
+\inputencoding auto
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_default_family default
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+\graphics default
+\paperfontsize default
+\spacing single
+\papersize default
+\use_geometry false
+\use_amsmath 0
+\use_esint 0
+\cite_engine basic
+\use_bibtopic false
+\paperorientation portrait
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\defskip medskip
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\author "" 
+\author "" 
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+tocchapter
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+{
+\end_layout
+
+\end_inset
+
+First chapter
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+This is the second chapter, and it's similar to the first one, but made
+ with LyX.
+\end_layout
+
+\begin_layout Section
+First section
+\end_layout
+
+\begin_layout Standard
+This is the first section of the second chapter.
+\end_layout
+
+\begin_layout Standard
+You will notice all paragraphs start indented, for example, this very paragraph
+ is indented, as you can see.
+\end_layout
+
+\begin_layout Standard
+\noindent
+You can avoid indentation with 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+verb#
+\backslash
+noindent#
+\end_layout
+
+\end_inset
+
+.
+ For example, this line.
+\end_layout
+
+\begin_layout Standard
+\noindent
+Example of item list:
+\end_layout
+
+\begin_layout Itemize
+This is a sample cite
+\begin_inset LatexCommand cite
+key "yo:07"
+
+\end_inset
+
+ (from bibliography file file-bibliography.bib).
+ 
+\end_layout
+
+\begin_layout Itemize
+This is a sample cite
+\begin_inset LatexCommand cite
+key "yo:08"
+
+\end_inset
+
+ (from bibliography file file-bibliography2.bib).
+ 
+\end_layout
+
+\begin_layout Itemize
+See Table\InsetSpace ~
+
+\begin_inset LatexCommand ref
+reference "tab"
+
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Itemize
+See Figure\InsetSpace ~
+
+\begin_inset LatexCommand ref
+reference "fig"
+
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Itemize
+See Eq.\InsetSpace ~
+
+\begin_inset LatexCommand ref
+reference "eq"
+
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+placement hbt
+wide false
+sideways false
+status open
+
+\begin_layout Standard
+ 
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="2" columns="2">
+<features>
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+a 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+b 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+c 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+d 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Caption
+
+\begin_layout Standard
+This is a table.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset LatexCommand label
+name "tab"
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement hbt
+wide false
+sideways false
+status open
+
+\begin_layout Standard
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+% Uncomment line below and change FILENAME for the file name of your (E)PS
+\end_layout
+
+\begin_layout Standard
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+%
+\backslash
+includegraphics[width=1.0
+\backslash
+cw]{FILENAME.eps}
+\end_layout
+
+\begin_layout Standard
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Caption
+
+\begin_layout Standard
+This is an empty figure.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset LatexCommand label
+name "fig"
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula \begin{equation}
+1+1=7\label{eq}\end{equation}
+
+\end_inset
+
+ 
+\end_layout
+
+\end_body
+\end_document

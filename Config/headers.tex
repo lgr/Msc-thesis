@@ -1,0 +1,12 @@
+\pagestyle{fancy}                                % choose this heading style (recommended)
+\fancyhf{}                                       % delete previous style, to then redefine it
+\fancyhead[LE,RO]{\textbf{\thepage}}             % Header: page number in boldface
+
+\fancyhead[RE]{\nouppercase{\leftmark}}          % Header: upper-level info (Chapter) to the right (R) of even (E)
+                                                 % pages, preventing ALLCAPS (which would be the default)
+
+\fancyhead[LO]{\nouppercase{\rightmark}}         % Header: include info about lower level (Section) to the left (L)
+                                                 % of odd (O) pages, preventing ALLCAPS
+
+\renewcommand{\headrulewidth}{0.5pt}             % Header: underline the header (set to "0pt" if unwanted)
+\renewcommand{\footrulewidth}{0pt}               % Footer: underline footer (set to "0pt" if unwanted)

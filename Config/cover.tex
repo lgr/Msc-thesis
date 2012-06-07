@@ -1,0 +1,34 @@
+%
+% This file produces the first page of the PFC/Thesis, featuring 
+% the title, your name, supervisor's name and so forth.
+%
+% Most, if not all, content in this page is included via commands 
+% (e.g. \thesistitle) that have been defined in Config/pfc_options.tex
+%
+% Edit to your liking.
+%
+
+\thispagestyle{empty} % don't print neither page number nor headers nor footers.
+
+%
+% Use \tb to place the various items in the page. Usage:
+%
+% \tb{w}{h}{v}{t}
+%
+% where:
+%
+% w = paragraph width of text box (1.0 = page width)
+% h = horizontal position of the center of text box (0.0 = left, 1.0 = right)
+% v = vertical position of the center of text box (0.0 = top, 1.0 = bottom)
+% t = text to put inside text box
+%
+
+\tb{0.8}{0.50}{0.225}{\huge \thesistitle}                      % title of the work
+\tb{0.8}{0.50}{0.370}{\Large \worktype}                        % whether this is a PFC or a Thesis
+\tb{0.5}{0.50}{0.400}{\today}                                  % creation date (change it for a fixed string, if you wish
+\tb{0.8}{0.50}{0.450}{\large \myname}                          % the name of the author
+\tb{0.8}{0.50}{0.500}{\large \textit{Supervisor:}\\ \myboss}   % the name of the supervisor
+\tb{0.9}{0.50}{0.900}{\includegraphics[width=0.30\columnwidth]{\logo}} % UPV/EHU logo
+
+\ \clearpage                       % end page here
+\thispagestyle{empty} \ \clearpage % blank page

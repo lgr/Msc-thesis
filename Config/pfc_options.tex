@@ -1,0 +1,76 @@
+%
+% Potentially useful packages (rec = recommended, opt = optional)
+%
+\usepackage{fancyhdr}          % (rec)  allows for the customization of various header/footer parameters
+\usepackage{courier}           % (opt)  uses that font by default
+\usepackage{setspace}          % (opt)  allows for inter-line space changing
+\usepackage{longtable}         % (opt)  allows for multi-page tables
+\usepackage{lscape}            % (opt)  allows for the use of \landscape
+\usepackage{color}             % (opt)  various color-related commands (like \color)
+\usepackage{rotating}          % (opt)  allows for PS and EPS rotation
+\usepackage{textcomp}          % (opt)  allows for euro sign, with \texteuro
+\usepackage{minitoc}           % (opt)  allows for per-chapter tables of contents
+\usepackage{epsf}              % (opt)  allow for certain EPS manipulations
+\usepackage[utf8x]{inputenc}   % (opt)  allows for some text editors to show \'{a} as �, and so on.
+\usepackage[T1]{fontenc}
+\usepackage[absolute]{textpos} % (rec)  allows for arbitrary positioning of text (required for default cover page)
+\usepackage{srcltx}            % (opt)  allows to pass from .dvi back to the .tex
+%
+% Margin settings. Uncomment and modify if you know what you are doing. Note
+% that a further 1 inch is added to the margins given here. The given values are
+% the default ones for A4 paper, and itsas_pfc.cls style.
+%
+%\setlength{\oddsidemargin}{10pt}     % left margin for odd (right) pages
+%\setlength{\evensidemargin}{52pt}    % left margin for even (left) pages
+%\setlength{\textwidth}{390pt}        % width of the text body
+
+%
+% Recommended to improve the automatic positioning of figures.
+% (taken from http://dcwww.camp.dtu.dk/~schiotz/comp/LatexTips/LatexTips.html#captfont)
+%
+\renewcommand{\topfraction}{0.85}
+\renewcommand{\textfraction}{0.1}
+\renewcommand{\floatpagefraction}{0.75}
+
+%
+% Space between top border of page and where text begins (headers go there)
+% LaTeX complains if using package fancyhdr and headheight is below 15pt
+%
+\headheight 15pt
+
+%
+% For the textpos package (used when making the cover page)
+%
+\setlength{\TPHorizModule}{\paperwidth}
+\setlength{\TPVertModule}{\paperheight}
+\newcommand{\tb}[4]{\begin{textblock}{#1}[0.5,0.5](#2,#3)\begin{center}#4\end{center}\end{textblock}}
+
+%
+% You can define your commands here
+% 
+% \newcommand{cmd}[args]{def}
+%
+% cmd  = command to define (e.g. \water)
+% args = number of arguments
+% def  = the definition, where #1, #2,... is the 1st, 2nd... argument
+%
+% E.g.:
+%
+% \newcommand{\water}[1]{H\ensuremath{_#1}O}
+%
+% Each time we write "\water{33}", the output will be: "H33O" (with 33 subscripted)
+%
+
+%\newcommand{\something}{something}
+
+%
+% You can teach LaTeX how to hypenize some words here
+% E.g.: to cut "gnomonly" only where dashed (-).
+%
+\hyphenation{gno-mon-ly} 
+ 
+%
+% Start book with Roman-numbered pages
+% Will be changed to arabics later on
+%
+\pagenumbering{Roman}

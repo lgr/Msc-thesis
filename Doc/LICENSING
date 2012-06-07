@@ -1,0 +1,36 @@
+This Work, comprising all the files listed below, is 
+hereby licensed under the following license:
+
+Creative Commons Attribution-ShareAlike 3.0
+
+You can find a summary here:
+
+http://creativecommons.org/licenses/by-sa/3.0/
+
+and the full license here:
+
+http://creativecommons.org/licenses/by-sa/3.0/legalcode
+
+In summary, you can use, distribute and modify the work in
+any way you want, as long as you cite the author (I. Silanes)
+and grant the recipients of your derivative works the same
+freedoms this license gives to you.
+
+All other files not explicitly cited here are either in the
+Public Domain, or under individual licenses.
+
+=== Files comprising this Work ===
+
+Config/appendices.tex
+Config/begin.tex
+Config/bibliography.tex
+Config/chapters.tex
+Config/cover.tex
+Config/headers.tex
+Config/itsas_pfc.cls
+Config/pfc_options.tex
+Config/rename.tex
+Config/toc.tex
+Doc/LICENSING
+Utils/ehu_logo.svg
+Utils/ehu_logo.eps

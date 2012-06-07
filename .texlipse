@@ -1,0 +1,14 @@
+#TeXlipse project settings
+#Thu Jun 07 18:55:30 CEST 2012
+markTmpDer=true
+builderNum=2
+outputDir=
+makeIndSty=
+bibrefDir=
+outputFormat=pdf
+tempDir=tmp
+mainTexFile=Main.tex
+outputFile=lgradzki_msc_thesis.pdf
+langSpell=en
+markDer=true
+srcDir=

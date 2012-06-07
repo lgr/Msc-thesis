@@ -1,0 +1,114 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                            %
+%  Template for the Proyecto Fin de Carrera  %
+%                                            %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%
+% CONFIG: Document style definition
+%
+
+\documentclass[a4paper,12pt]{Config/itsas_pfc}
+
+%
+% CONFIG: File with main configuration
+%
+
+\input{Config/pfc_options.tex}
+
+%
+% CONFIG: The document itself begins
+%
+
+\begin{document}
+
+%
+% CONFIG: assign value to some variables
+%
+
+\input{Config/rename.tex}
+
+%         
+% CONTENT: Cover page
+%         
+
+\input{Config/cover.tex}
+
+%
+% CONFIG: Begin counting pages from 1 again
+%
+
+\input{Config/begin.tex}
+
+%
+% CONTENT: If you wish to include acknowledgements, prefaces, quotes...
+%
+
+\input{file-acknowledgements.tex} % acknowledgements
+\input{file-preface.tex}          % preface
+
+%
+% CONFIG: Table of Contents (ToC)
+% 
+
+\input{Config/toc.tex}
+
+%
+% CONFIG: Define header/footer style
+%
+
+\input{Config/headers.tex}
+
+%
+% CONTENT: Abstract
+%
+
+\input{file-abstract.tex}
+
+%
+% CONFIG: Style of chapters
+%
+
+\input{Config/chapters.tex}
+
+%
+% CONTENT: After that, include as many chapters/sections as you wish
+%
+
+\input{content.tex}
+
+%
+% CONFIG: Style for appendices
+%
+
+\input{Config/appendices.tex}
+
+%
+% CONTENT: Appendices, if desired
+%
+
+\input{file-appendix1.tex} % Appendix I
+
+%
+% CONFIG: Bibliography style
+%
+
+\input{Config/bibliography.tex}
+
+%
+% CONTENT: Bibliography. Input list of .bib files you wish to use, as shown
+%
+
+\bibliography{file-bibliography,file-bibliography2}
+
+%
+% CONTENT: List of publications
+%
+
+\input{file-publications.tex}
+
+%
+% It all ends here
+%
+
+\end{document}
