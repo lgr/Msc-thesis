@@ -3,7 +3,7 @@
 \section{Motivation}
 Why do we make the research? 
 Requirements of the Semantics Web Research. 
-Current solutions. 
+Current solutions.
 The main research papers that are going to be used as the basis for the study.
 There is no definite guide for the software (feel the gap between the detailed
 documentation and superficial general-purpose manuals).
@@ -21,8 +21,45 @@ semantic webs.
 \chapter{Problem analysis}
 \label{chap:Problemanalysis}
 
-\section{Semantic Webs}
-\ldots
+\section{Semantic Web}
+
+\subsection{Definitions}
+Semantic Web is a project focused on definition and publication of the standards
+regarding content descriptions on the Internet. The main objective of these
+standards is to provide the content in a form convenient for the effective
+information processing by the software and hardware. The semantic Web
+standards include OWL (\textit{Web Ontology Language}), RDF (\textit{Resource
+Description Framework}, Sec.~\ref{sec:RDF}) and RDFS (\textit{RDF Schema}).
+The meanings of the informational resources are defined using
+ontologies (Sec.~\ref{sec:Ontology}) - this representation are discussed in
+details in the next section.
+
+Semantic Web was an idea of Tim Berners-Lee who is the chef of W3C, the creator
+of the WWW standard and the first Web browser. In principle, semantic Web should
+be based on the existing communication protocols that set up the contemporary
+Internet. The main difference is that the published data must be also
+\textit{comprehensible} for the machines. To achieve this objective, the
+resources are presented in a form that allows to identify their context
+and the relations between them.
+
+\subsection{Ontologies}
+\label{sec:Ontology}
+In general, ontology is a formal representation of a knowledge domain, that
+is composed of sets of concepts and relations between them. This system creates
+a conceptual schema that provides a description of some domain. In addition,
+the conceptual schema can be used as a basis to draw conclusions about the
+properties of the terms described by a given ontology. According to
+XYZ, Ontologies are classified into lightweight ontologies and heavylight
+ontologies according to it expressiveness [4]. The lightweight ontology, sometimes
+called terminology, is simple a taxonomic structure of concepts
+and some includes simple comments on relations between
+concepts. The heavyweight ontology extensively axiomatizes
+concepts and relations to represent ontological commitment
+explicitly and it is thus composed of concepts, relations and
+rules. Every heavyweight ontology can have a lightweight
+version. And there is not a clear borderline between light to
+heavy weight.
+
 
 \subsection{Field of study}
 
@@ -32,7 +69,9 @@ semantic webs.
 
 \section{Data Storage Formats}
 \subsection{Relational DBs}
-\subsection{RDF}
+
+\subsection{Resource Description Framework}
+\label{sec:RDF}
 
 \section{Overview of existing systems}
 \ldots
@@ -51,21 +90,44 @@ semantic webs.
 
 \section{General properties of the Virtuoso System}
 \subsection{History of development}
+\subsection{Properties of Virtuoso}
 \subsection{Main applications}
 \subsection{Aspects important for the Semantic Webs}
 
+
 \section{Used Tools}
+
+
 \subsection{LUBM Benchmark}
+The Lehigh University Benchmark is developed to facilitate the evaluation of
+Semantic Web repositories in a standard and systematic way. The benchmark is
+intended to evaluate the performance of those repositories with respect to
+extensional queries over a large data set that commits to a single realistic
+ontology. It consists of a university domain ontology, customizable and
+repeatable synthetic data, a set of test queries, and several performance metrics.
 
 \chapter{System analysis}
 \section{Internal Structure}
+\subsection{SPARQL end-point}
+\subsection{Advantages}
+\subsection{Special queries and commands}
+
+\section{Key Features}
 \subsection{Reasoning}
 Forward/backward chaining.
 
-\subsection{SPARQL end-point}
+\subsection{Import Data Mechanisms}
+
+\subsection{Export Data Mechanisms}
 
 \section{Comparison with similar systems}
 \subsection{Virtuoso vs Oracle NoSQL}
 
 \chapter{Conclusions}
+The section includes the following:
+ Overall analysis and integration of the research and conclusions of the thesis in light of current research in the field
+ Conclusions regarding goals or hypotheses of the thesis that were presented in the Introduction, and the overall significance and contribution of the thesis research
+ Comments on strengths and limitations of the thesis research
+ Discussion of any potential applications of the research findings
+ An analysis of possible future research directions in the field drawing on the work of the thesis
 \ldots
