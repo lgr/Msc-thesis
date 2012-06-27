@@ -14,7 +14,7 @@ general description.
 
 \section{Objectives}
 \label{sec:Objectives}
-The main objective of the thesis\cite{6079245} is to analyse and describe the
+The main objective of the thesis is to analyse and describe the
 properties of the Virtuoso System that are crucial for the research over the
 semantic webs.
 
@@ -48,18 +48,20 @@ In general, ontology is a formal representation of a knowledge domain, that
 is composed of sets of concepts and relations between them. This system creates
 a conceptual schema that provides a description of some domain. In addition,
 the conceptual schema can be used as a basis to draw conclusions about the
-properties of the terms described by a given ontology. According to
-XYZ, Ontologies are classified into lightweight ontologies and heavylight
-ontologies according to it expressiveness [4]. The lightweight ontology, sometimes
-called terminology, is simple a taxonomic structure of concepts
-and some includes simple comments on relations between
-concepts. The heavyweight ontology extensively axiomatizes
-concepts and relations to represent ontological commitment
-explicitly and it is thus composed of concepts, relations and
-rules. Every heavyweight ontology can have a lightweight
-version. And there is not a clear borderline between light to
-heavy weight.
+properties of the terms described by a given ontology. 
 
+According to Yu Juan and Dang Yanzhong\cite{5592098}, ontologies are classified
+into two groups, according to their expressiveness:
+\begin{itemize}
+  \item lightweight ontologies
+  \item heavylight ontologies
+\end{itemize}
+
+The lightweight ontologies, also referred as terminologies, are simple taxonomic
+structures of concepts with simplified relationships between them. On the
+other hand, the heavyweight ontologies  are composed of concepts, relations and
+rules that represent ontological commitment explicitly. Sometimes is difficult
+to clearly assign an ontology to one of these types.
 
 \subsection{Field of study}
 
@@ -97,14 +99,58 @@ heavy weight.
 
 \section{Used Tools}
 
+\subsection{Installation of Virtuoso}
+The analysis was based on the newest stable version (ver. 6.1.5) of the
+OpenLink Virtuoso compiled and installed from the source code obtained from the
+SourceForge project page (ref.~\cite{VirtuosoUrl}). The software was installed
+on the following machine:
+\begin{itemize}
+  \item Operating System: Linux Ubuntu 12.04 LTS 32-bit version
+  \item Processor: Intel\textregistered Core\texttrademark2 Duo CPU T7500 @
+  2.20GHz × 2
+  \item RAM: 2 x 2 GB SODIMM DDR2 Synchronous 667 MHz 
+\end{itemize}
 
-\subsection{LUBM Benchmark}
-The Lehigh University Benchmark is developed to facilitate the evaluation of
-Semantic Web repositories in a standard and systematic way. The benchmark is
-intended to evaluate the performance of those repositories with respect to
-extensional queries over a large data set that commits to a single realistic
-ontology. It consists of a university domain ontology, customizable and
-repeatable synthetic data, a set of test queries, and several performance metrics.
+In addition, the Virtuoso was configured with the following parameters
+(settings in the \texttt{virtuoso.ini} file):
+
+\begin{itemize}
+  \item \texttt{NumberOfBuffers = 170000} (what corresponds to about 1410 MB of
+  RAM)
+  \item \texttt{MaxDirtyBuffers = 130000}
+  \item \texttt{MaxCheckpointRemap = 42500} (25\% of \texttt{NumberOfBuffers})
+\end{itemize}
+
+\subsection{The LUBM Benchmark}
+The study required a sample RDF data to be stored and processed by Virtuoso. For
+this purpose, the LUBM Benchmark (\textit{The Lehigh University Benchmark},
+ref.~\cite{LUBMUrl}) was used. According to its creators, LUBM was developed to
+facilitate the evaluation of Semantic Web repositories in a standard and
+systematic way. The tool evaluates the performance of those repositories with
+respect to extensional queries over a large data set that commits to a single
+realistic ontology. 
+
+The sample data used in the benchmark is an ontology describing a university
+structure. It can be dynamically generated in a customizable and repeatable
+way. In addition, it includes a set of test queries and provides several
+performance metrics.
+
+To start with, the newest benchmark code (version 1.7) has been downloaded from
+the LUBM page: \cite{LUBMUrl}. Apart from this, it is necessary to apply a
+special patch that makes the tool work with Linux paths. Then, the
+testing ontology data was generated for three universities with the following
+command:
+
+\begin{verbatim}
+java -cp classes edu.lehigh.swat.bench.uba.Generator -univ 3 \
+-index 0 -seed 1234 \
+-onto http://www.lehigh.edu/~zhp2/2004/0401/univ-bench.owl
+\end{verbatim}
+
+According to the above \texttt{-onto} parameter, the appropriate ontology was
+downloaded \cite{LUBMUrlOWL}. Apart from this, the
+\texttt{VirtBulkRDFLoaderScript.vsql} script was prepared and loaded via
+\texttt{isql} to enable the bulk loading of all generated ontologies.
 
 \chapter{System analysis}
 \section{Internal Structure}
@@ -115,6 +161,9 @@ repeatable synthetic data, a set of test queries, and several performance metric
 \section{Key Features}
 \subsection{Reasoning}
 Forward/backward chaining.
+In essence, Virtuoso's support for subclasses and subproperties is backward
+chaining, i.e. it does not materialize all implied triples but rather looks for
+the basic facts implying these triples at query evaluation time.
 
 \subsection{Import Data Mechanisms}
 
