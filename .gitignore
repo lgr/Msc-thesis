@@ -27,9 +27,4 @@
 *.mtc0
 BSc_old/*
 tmp/*
-Main.mtc1
-Main.mtc2
-Main.mtc3
-Main.mtc4
-Main.mtc5
-Main.mtc6
+save.sh
