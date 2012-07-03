@@ -1,7 +1,7 @@
 Msc-thesis
 ==========
 
-My master thesis under the working title: "OpenLink Virtuoso as the universal  database engine for the semantic web application".
+My master thesis under the working title: "Guidelines for using OpenLink Virtuoso as the database engine for Semantic Web applications".
 
 Due to the legal reasons, the compressed file had to be protected with a password.
 
