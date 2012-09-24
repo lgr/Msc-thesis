@@ -7,8 +7,7 @@ http://localhost:8890/about/html/http://www.imdb.com/title/tt0068646/
 ###############
 
 
-SPARQL
-SELECT * FROM <http://www.imdb.com/title/tt0068646/> WHERE {?p ?o ?s}
+SPARQL SELECT * FROM <http://www.imdb.com/title/tt0068646/> WHERE {?subject ?predicate ?object}
 
 
 ##############
